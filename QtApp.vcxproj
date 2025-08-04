@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{327A983D-CD49-4285-8006-787B4FA156F7}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>angio_auto_edge</ProjectName>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;opengl;gui;uitools;widgets;winextras;3dcore;3danimation;3dextras;3dinput;3dlogic;3drender;openglextensions;charts</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;opengl;gui;uitools;widgets;winextras;3dcore;3danimation;3dextras;3dinput;3dlogic;3drender;openglextensions;charts</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+    <QtDeploy>false</QtDeploy>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Qt.props" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Qt.props" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\Project\dcmtk\Debug\lib;D:\Project\Opencv\lib;D:\Project\nifti\lib;D:\Angio\Libraries\Bublid\zlib\build\Release;D:\Angio\Libraries\Release\zlib\lib;$(SolutionDir)lib;$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\lib;D:\Angio\Libraries\Release\npy\lib;C:\Qt\5.15.2\msvc2019_64\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Project\dcmtk\Debug\include;D:\Project\Opencv/include;D:\Project\nifti\include;$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\include;D:\Angio\Libraries\Release\zlib\include;D:\Angio\Libraries\Release\npy\include;C:\Qt\5.15.2\msvc2019_64\include;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\Project\dcmtk\Debug\bin;D:\Project\Opencv\bin;D:\Project\nifti\bin;$(SolutionDir)../Freeglut\bin;$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\bin;D:\Angio\Libraries\Release\zlib\bin;D:\Angio\Libraries\Release\npy\bin;$(VC_ReferencesPath_x64);C:\Qt\5.15.2\msvc2019_64\bin;$(ReferencePath)</ReferencePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <TargetName>Angio_auto</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)../dcmtk\Release\include;$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\include;$(SolutionDir)../Opencv/include;$(SolutionDir)../nifti/include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\bin;$(VC_ReferencesPath_x64);$(SolutionDir)../Opencv/bin;$(SolutionDir)../nifti/bin;$(SolutionDir)../dcmtk\Release\bin;$(SolutionDir)../nifti/lbin;$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(SolutionDir)../dcmtk\Release\lib;$(SolutionDir)../libtensorflow-gpu-windows-x86_64-2.3.0\lib;$(SolutionDir)lib;$(SolutionDir)../Opencv/lib;D:\Project\Angio\nifti\lib;D:/Angio/Libraries/Release/zlib/lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath);$(ExecutablePath)</ExecutablePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>Angio</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4244;4996;4819%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>$(Qt_DEFINES_);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(Qt_INCLUDEPATH_);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ConformanceMode>Default</ConformanceMode>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <QtMoc />
+    <QtMoc />
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_60,sm_60;compute_61,sm_61;compute_70,sm_70;compute_75,sm_75;</CodeGeneration>
+      <FastMath>true</FastMath>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Include>
+      </Include>
+      <Runtime>InheritFromHost</Runtime>
+    </CudaCompile>
+    <Link>
+      <AdditionalDependencies>freeglut.lib;opengl32.lib;cuda.lib;cudart_static.lib;glut32.lib;opencv_world480d.lib;opencv_world480.lib;python38.lib;znz.lib;nifticdf.lib;nifti2.lib;zlibstatic.lib;zlib.lib;cnpy.lib;$(Qt_LIBS_);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(Qt_LIBPATH_);%(AdditionalLibraryDirectories);$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaLink>
+      <Optimization>InheritFromProject</Optimization>
+    </CudaLink>
+    <QtUic>
+      <AdditionalOptions>Output File</AdditionalOptions>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>freeglut.lib;opengl32.lib;cuda.lib;cudart_static.lib;opencv_world480.lib;opencv_world480d.lib;znz.lib;nifticdf.lib;nifti2.lib;zlibstatic.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_60,sm_60;compute_61,sm_61;compute_70,sm_70;compute_75,sm_75;compute_52,sm_52</CodeGeneration>
+      <FastMath>true</FastMath>
+      <HostDebugInfo>false</HostDebugInfo>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateLineInfo>false</GenerateLineInfo>
+      <AdditionalOptions>--extended-lambda %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <OpenMPSupport>true</OpenMPSupport>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4244;4996;4819%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ConformanceMode>Default</ConformanceMode>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalOptions>/Zo %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerOutput>All</AssemblerOutput>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <QtUic>
+      <AdditionalOptions>Output File</AdditionalOptions>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Angio_Algorithm.cpp" />
+    <ClCompile Include="Angio_cvAlgorithm.cpp" />
+    <ClCompile Include="AxisLineObj.cpp" />
+    <ClCompile Include="ChartCallout.cpp" />
+    <ClCompile Include="ChartView.cpp" />
+    <ClCompile Include="dcmHelper.cpp" />
+    <ClCompile Include="LineObj.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Functor.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Model_Info.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Result_Info.cpp" />
+    <ClCompile Include="SeriesBrowserClass.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="TaskManager\Manager.cpp" />
+    <ClCompile Include="TaskManager\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TaskManager\ThreadPool.cpp" />
+    <ClCompile Include="TexObj.cpp" />
+    <ClCompile Include="TriObj.cpp" />
+    <ClCompile Include="ViewClass.cpp" />
+    <ClCompile Include="GraphicsWindow.cpp" />
+    <ClCompile Include="windowBoundaryCondition.cpp" />
+    <ClCompile Include="windowFFR3D.cpp" />
+    <ClCompile Include="windowImage.cpp" />
+    <ClCompile Include="windowMessageBox.cpp" />
+    <ClCompile Include="windowModel.cpp" />
+    <ClCompile Include="windowSelect.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Angio_Algorithm.h" />
+    <ClInclude Include="Angio_cvAlgorithm.h" />
+    <ClInclude Include="AxisLineObj.h" />
+    <ClInclude Include="ChartCallout.h" />
+    <ClInclude Include="ChartView.h" />
+    <ClInclude Include="dcmHelper.h" />
+    <ClInclude Include="ListWidget.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Model_Info.h" />
+    <ClInclude Include="OpenCV_Algorithm.h" />
+    <QtMoc Include="windowBoundaryCondition.h" />
+    <ClInclude Include="Result_Info.h" />
+    <ClInclude Include="TaskManager\Manager.h" />
+    <ClInclude Include="TaskManager\stdafx.h" />
+    <ClInclude Include="TaskManager\Task.h" />
+    <ClInclude Include="TaskManager\Task_stdafx.h" />
+    <ClInclude Include="TaskManager\ThreadPool.h" />
+    <QtMoc Include="windowFFR3D.h" />
+    <ClInclude Include="windowImage.h" />
+    <QtMoc Include="windowMessageBox.h" />
+    <QtMoc Include="windowModel.h" />
+    <ClInclude Include="windowSelect.h" />
+    <ClInclude Include="Functor.h" />
+    <ClInclude Include="LineObj.h" />
+    <QtMoc Include="SeriesBrowserClass.h" />
+    <ClInclude Include="TriObj.h" />
+    <QtMoc Include="MainWindow.h" />
+    <CudaCompile Include="pub.cuh">
+      <FileType>Document</FileType>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">--expt-extended-lambda %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">--expt-extended-lambda %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="TexObj.h" />
+    <QtMoc Include="ViewClass.h" />
+    <QtMoc Include="GraphicsWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">--expt-extended-lambda %(AdditionalOptions)</AdditionalOptions>
+      <GPUDebugInfo Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GPUDebugInfo>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">--extended-lambda %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\windowBoundaryCondition.ui" />
+    <QtUic Include="ui\windowFFR3D.ui" />
+    <QtUic Include="ui\windowGraphics.ui" />
+    <QtUic Include="ui\windowGT.ui" />
+    <QtUic Include="ui\windowImage.ui" />
+    <QtUic Include="ui\windowMain.ui" />
+    <QtUic Include="ui\windowMessageBox.ui" />
+    <QtUic Include="ui\windowModel.ui" />
+    <QtUic Include="ui\windowSelect.ui" />
+    <QtUic Include="ui\windowSelectAI.ui" />
+    <QtUic Include="ui\windowSeriesBrowser.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.2.targets" />
+  </ImportGroup>
+</Project>

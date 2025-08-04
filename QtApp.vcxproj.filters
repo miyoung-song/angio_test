@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{4a4c4cb1-f061-46fe-84f8-d52edaa3a385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\windows">
+      <UniqueIdentifier>{5ceef33c-eb78-4129-8bf5-5920ba8b980a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager">
+      <UniqueIdentifier>{339debb1-6c52-47f7-b603-ad20f3ff0a64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Functor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dcmHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TexObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SeriesBrowserClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChartCallout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowFFR3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisLineObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowBoundaryCondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\Manager.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\stdafx.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\ThreadPool.cpp">
+      <Filter>TaskManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model_Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Angio_Algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Result_Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Angio_cvAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dcmHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TexObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowSelect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChartCallout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisLineObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenCV_Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\Manager.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\stdafx.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\Task.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\Task_stdafx.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\ThreadPool.h">
+      <Filter>TaskManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChartView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model_Info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Angio_Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Result_Info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Angio_cvAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GraphicsWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ViewClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SeriesBrowserClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="windowFFR3D.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="windowMessageBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="windowBoundaryCondition.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="windowModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="pub.cuh">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\windowBoundaryCondition.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowFFR3D.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowGraphics.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowGT.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowImage.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowMain.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowMessageBox.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowModel.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowSelect.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowSeriesBrowser.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+    <QtUic Include="ui\windowSelectAI.ui">
+      <Filter>ui</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>
